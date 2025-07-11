@@ -9,7 +9,8 @@
       font-family: sans-serif;
       margin: 0;
       padding: 0;
-      background: #fff;
+      background: #212121;
+      color: white;
     }
 
     .container {
@@ -21,6 +22,7 @@
     h1 {
       font-size: 1.5em;
       margin: 24px 0 16px 0;
+      color: rgba(255, 255, 255, 0.85);
     }
 
     .controls {
@@ -34,36 +36,49 @@
       font-size: 1em;
       margin-right: 8px;
       padding: 6px 12px;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
+    }
+
+    button:disabled,
+    select:disabled {
+      background-color: rgba(255, 255, 255, 0.05);
+      color: rgba(255, 255, 255, 0.5);
+      border-color: rgba(255, 255, 255, 0.05);
     }
 
     .status {
       margin: 8px 0;
       padding: 4px 8px;
       font-size: 0.95em;
+      transition: background-color 0.3s ease;
     }
 
     .status.connected {
-      background-color: #d4edda;
-      color: #155724;
-      border: 1px solid #c3e6cb;
+      background-color: rgba(65, 152, 35, 0.484);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 4px;
     }
 
     .status.disconnected {
-      background-color: #f8d7da;
-      color: #721c24;
-      border: 1px solid #f5c6cb;
+      background-color: rgba(94, 19, 19, 0.445);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 4px;
     }
 
     .results {
       margin: 12px 0 24px 0;
       padding: 8px;
-      border: 1px solid #ccc;
+      border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 4px;
       min-height: 100px;
       max-height: 100px;
-      background: #fafafa;
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
       font-family: monospace;
       font-size: 1em;
       white-space: pre-wrap;

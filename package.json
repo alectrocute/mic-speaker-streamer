@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "dotenv": "^17.2.0",
-    "electron-audio-loopback": "1.0.3"
+    "electron-audio-loopback": "^1.0.5"
   },
   "devDependencies": {
     "electron": "35.0.0"

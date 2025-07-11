@@ -1,7 +1,7 @@
 {
   "name": "mic-speaker-streamer",
   "productName": "Mic & Speaker Streamer",
-  "description": "Example Electron app for streaming mic and speaker",
+  "description": "Electron app for simultaneously streaming microphone and speaker audio",
   "keywords": [],
   "main": "./main.js",
   "version": "1.0.0",

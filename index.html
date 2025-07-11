@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Mic & Speaker Streamer</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 32px auto;
+      padding: 0 12px;
+    }
+
+    h1 {
+      font-size: 1.5em;
+      margin: 24px 0 16px 0;
+    }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    button,
+    select {
+      font-size: 1em;
+      margin-right: 8px;
+      padding: 6px 12px;
+    }
+
+    .status {
+      margin: 8px 0;
+      padding: 4px 8px;
+      font-size: 0.95em;
+    }
+
+    .status.connected {
+      background-color: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+      border-radius: 4px;
+    }
+
+    .status.disconnected {
+      background-color: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+      border-radius: 4px;
+    }
+
+    .results {
+      margin: 12px 0 24px 0;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      min-height: 100px;
+      max-height: 100px;
+      background: #fafafa;
+      font-family: monospace;
+      font-size: 1em;
+      white-space: pre-wrap;
+      overflow-y: scroll;
+    }
+
+    .section {
+      margin: 18px 0 6px 0;
+      font-weight: bold;
+    }
+
+    .status-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Minimal Streamer POC</h1>
+    <div class="controls">
+      <button id="startBtn" type="button">Start Streaming</button>
+      <button id="stopBtn" type="button" disabled>Stop Streaming</button>
+      <button id="recordBtn" type="button" disabled>Start Recording</button>
+      <select id="micSelect"></select>
+      <select id="modelSelect">
+        <option value="whisper-1">whisper-1</option>
+        <option value="gpt-4o-transcribe">GPT-4o-transcribe</option>
+        <option value="gpt-4o-mini-transcribe">GPT-4o-mini-transcribe</option>
+      </select>
+    </div>
+    <div class="status-row">
+      <div id="micStatus" class="status disconnected">Microphone: Disconnected</div>
+      <div id="speakerStatus" class="status disconnected">System Audio: Disconnected</div>
+      <div id="recordStatus" class="status disconnected">Recording: Stopped</div>
+    </div>
+    <div class="section">Microphone Transcription</div>
+    <pre class="results" id="micResults">Waiting for microphone input...</pre>
+    <div class="section">System Audio Transcription</div>
+    <pre class="results" id="speakerResults">Waiting for system audio...</pre>
+  </div>
+  <script src="./renderer.js"></script>
+</body>
+
+</html>

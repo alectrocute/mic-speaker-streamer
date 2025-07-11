@@ -91,8 +91,8 @@ This application requires an OpenAI API key with access to the Realtime API. The
 
 ## License
 
-This project is provided as-is for educational and development purposes.
+This project is provided as-is for educational and development purposes. Go crazy.
 
 ## Author
 
-Alec Armbruster <alectrocute[at]gmail.com>
+Alec Armbruster [@alectrocute](https://github.com/alectrocute)

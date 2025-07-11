@@ -4,7 +4,8 @@ An example Electron application that streams microphone and system audio to Open
 
 This provides a starting point for building a desktop application that streams microphone and system audio to OpenAI's Realtime API for real-time transcription. See [electron-audio-loopback](https://github.com/alectrocute/electron-audio-loopback) for more information on how to capture system audio.
 
-![Screenshot](.github/screenshot.png)
+![Screenshot](.github/screenshot-1.png)
+![Screenshot](.github/screenshot-2.png)
 
 ## Features
 
